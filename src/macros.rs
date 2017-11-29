@@ -60,8 +60,8 @@ macro_rules! impl_from_bits {
                     // Create mask:
                     //      1 << 3 = 0100
                     // Overwrite bit:
-                    //      x & mask
-                    //      0000 & 0100 = 0100
+                    //      x | mask
+                    //      0000 | 0100 = 0100
                     if bit {
                         val = val | (1 << i);
                     }
